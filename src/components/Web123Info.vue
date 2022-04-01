@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "Web3Info",
+  name: "Web123Info",
 };
 </script>
 <style scoped>
