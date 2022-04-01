@@ -28,6 +28,7 @@ export default {
   display: flex;
   margin: auto;
   align-items: center;
+  width: fit-content;
 }
 .person {
   display: flex;

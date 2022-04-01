@@ -20,8 +20,9 @@ export default {
 </script>
 <style scoped>
 .content {
+  margin: auto;
   display: flex;
-  margin: 20px;
+  width: fit-content;
 }
 .web1 {
   display: flex;
