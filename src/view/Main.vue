@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <web-3-logo />
     <login-info />
     <decentralication-info />
     <web-3-info />
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+import Web3Logo from "../components/Web3Logo.vue";
 import LoginInfo from "../components/LoginInfo.vue";
 import DecentralicationInfo from "../components/DecentralicationInfo.vue";
 import Web3Info from "../components/Web3Info.vue";
@@ -19,6 +21,7 @@ import BubbleInfo from "../components/BubbleInfo.vue";
 export default {
   name: "MainView",
   components: {
+    Web3Logo,
     LoginInfo,
     DecentralicationInfo,
     Web3Info,
@@ -29,6 +32,11 @@ export default {
 };
 </script>
 <style scoped>
+web-3-logo {
+  position: absolute;
+  left: 2%;
+  top: 5%;
+}
 .content {
   position: relative;
 
