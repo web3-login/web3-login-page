@@ -1,5 +1,5 @@
 <template>
-  <div class="content">LOG IN USING YOUR CRYPTO ACCOUNT</div>
+  <div class="logininfo">LOG IN USING YOUR CRYPTO <br/> ACCOUNT</div>
 </template>
 
 <script>
@@ -8,18 +8,15 @@ export default {
 };
 </script>
 <style scoped>
-.content {
-  position: absolute;
-  width: 517px;
+.logininfo {
+  margin: 40px;
+  width: 100%;
   height: 90px;
-  left: 457px;
-  top: 184px;
 
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
-  line-height: 45px;
   text-align: center;
 
   color: #ffffff;

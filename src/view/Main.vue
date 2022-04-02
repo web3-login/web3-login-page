@@ -2,6 +2,7 @@
   <div class="content">
     <web-3-logo />
     <login-info />
+    <login-comp />
     <decentralication-info />
     <web-3-info />
     <web-123-info />
@@ -18,6 +19,7 @@ import Web3Info from "../components/Web3Info.vue";
 import Web123Info from "../components/Web123Info.vue";
 import HowItWorksInfo from "../components/HowItWorksInfo.vue";
 import BubbleInfo from "../components/BubbleInfo.vue";
+import LoginComp from "../components/LoginComp.vue";
 export default {
   name: "MainView",
   components: {
@@ -27,7 +29,8 @@ export default {
     Web3Info,
     Web123Info,
     HowItWorksInfo,
-    BubbleInfo
+    BubbleInfo,
+    LoginComp
   },
 };
 </script>

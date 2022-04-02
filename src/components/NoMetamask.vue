@@ -1,0 +1,29 @@
+<template>
+  <div class="nometamask">
+    <span>You will need</span
+    ><img alt="metamask" src="../assets/metamask-fox.svg" width="68" height="60" />
+    <span>METAMASK to sign a message</span>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "NoMetamask",
+};
+</script>
+<style scoped>
+.nometamask {
+  margin: 20px;
+  width: fit-content;
+  height: 60px;
+  display: flex;
+}
+.nometamask span {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 60px;
+}
+</style>
