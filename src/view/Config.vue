@@ -2,7 +2,7 @@
   <div class="content">
     <h2>OpenID Connect Config for your Webpage</h2>
 
-    <form action="https://oidc.web3-login.net/nft/authorize">
+    <form action="/">
       <label for="authorize">Authorize URI (required)</label><br />
       <input
         type="text"

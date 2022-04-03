@@ -1,21 +1,21 @@
 <template>
   <div class="content">
-    <no-metamask />
+    <metamask-info />
     <contract-info />
     <login-button />
   </div>
 </template>
 
 <script>
-import NoMetamask from "./NoMetamask.vue";
 import LoginButton from "./LoginButton.vue";
 import ContractInfo from './ContractInfo.vue';
+import MetamaskInfo from './MetamaskInfo.vue';
 export default {
   name: "LoginComp",
   components: {
-    NoMetamask,
     LoginButton,
-    ContractInfo
+    ContractInfo,
+    MetamaskInfo
   },
 };
 </script>

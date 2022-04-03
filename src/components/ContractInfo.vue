@@ -10,7 +10,6 @@ export default {
   setup() {
     const search = window.location.search;
     const contract = new URLSearchParams(search).get("contract");
-    console.log(search, contract);
     return {
       contract,
     };
@@ -19,14 +18,12 @@ export default {
 </script>
 <style scoped>
 .contractinfo {
-  margin: 40px;
-  width: 100%;
   height: 90px;
 
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 24px;
   text-align: center;
 
   color: #ffffff;
