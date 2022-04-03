@@ -1,6 +1,5 @@
 <template>
   <div class="content">
-    <web-3-logo />
     <login-info />
     <login-comp />
     <decentralication-info />
@@ -12,7 +11,6 @@
 </template>
 
 <script>
-import Web3Logo from "../components/Web3Logo.vue";
 import LoginInfo from "../components/LoginInfo.vue";
 import DecentralicationInfo from "../components/DecentralicationInfo.vue";
 import Web3Info from "../components/Web3Info.vue";
@@ -23,7 +21,6 @@ import LoginComp from "../components/LoginComp.vue";
 export default {
   name: "MainView",
   components: {
-    Web3Logo,
     LoginInfo,
     DecentralicationInfo,
     Web3Info,

@@ -1,21 +1,29 @@
 <template>
-  <Main />
+  <div>
+    <navbar-comp />
+    <router-view />
+  </div>
 </template>
 
 <script>
-import Main from './view/Main.vue'
+import NavbarComp from "./components/NavbarComp.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Main
-  }
-}
+    NavbarComp,
+  },
+};
 </script>
 
 <style>
 body {
   background: #002245;
+}
+navbar-comp {
+  position: absolute;
+  top: 0px;
+  right: 50px;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
