@@ -1,11 +1,17 @@
 <template>
   <div class="nometamask">
     <span>You will need</span
-    ><img alt="metamask" src="../assets/metamask-fox.svg" width="68" height="60" />
-    <span>METAMASK to sign a message</span>
+    ><a href="https://metamask.io/"
+      ><img
+        alt="metamask"
+        src="../assets/metamask-fox.svg"
+        width="68"
+        height="60"
+      /> </a
+    ><a href="https://metamask.io/"><span>METAMASK</span></a
+    ><span>&nbsp; to sign a message</span>
   </div>
 </template>
-
 <script>
 export default {
   name: "NoMetamask",
