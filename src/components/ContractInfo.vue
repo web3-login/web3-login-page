@@ -1,5 +1,8 @@
 <template>
-  <div v-if="contract" class="contractinfo">contract: {{ contract }}</div>
+  <div v-if="contract && redirect_uri" class="contractinfo">
+    contract: {{ contract }}<br />
+    page: {{ page }}
+  </div>
 </template>
 <script>
 export default {
@@ -10,8 +13,12 @@ export default {
   setup() {
     const search = window.location.search;
     const contract = new URLSearchParams(search).get("contract");
+    const redirect_uri = new URLSearchParams(search).get("redirect_uri");
+    const page = new URL(redirect_uri).hostname;
     return {
       contract,
+      redirect_uri,
+      page,
     };
   },
 };

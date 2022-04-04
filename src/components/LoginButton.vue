@@ -1,5 +1,16 @@
 <template>
-  <div v-if="provider" v-on:click="buttonClicked" class="content">Login</div>
+  <div>
+    <div
+      v-if="provider && redirect_uri"
+      v-on:click="buttonClicked"
+      class="content"
+    >
+      Login
+    </div>
+    <div v-if="!redirect_uri" class="content">
+      <router-link to="/config">Try It Out</router-link>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -48,6 +59,7 @@ export default {
     const search = window.location.search;
     const contract = new URLSearchParams(search).get("contract");
     const nonce = new URLSearchParams(search).get("nonce");
+    const redirect_uri = new URLSearchParams(search).get("redirect_uri");
     if (provider) {
       provider
         .request({
@@ -62,6 +74,7 @@ export default {
       provider,
       contract,
       nonce,
+      redirect_uri,
     };
   },
 };
@@ -86,5 +99,11 @@ export default {
 
   text-decoration: none;
   cursor: pointer;
+}
+.content a:link {
+  text-decoration: none;
+}
+.content a:visited {
+  text-decoration: none;
 }
 </style>
