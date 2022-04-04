@@ -32,7 +32,7 @@ export default {
       const query = `${urlParams.toString()}`;
       console.log(query);
       window.open(
-        "https://oidc.web3-login.net/nft/42/authorize?" + query,
+        process.env.VUE_APP_OIDC_WEB3_LOGIN_HOST + "/nft/authorize?" + query,
         "_self"
       );
     },

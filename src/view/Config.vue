@@ -26,7 +26,7 @@
       <label for="nonce">Nonce</label><br />
       <input type="text" id="nonce" name="nonce" value="random" /><br />
       <label for="response_type">Response Type</label><br />
-      <input type="text" id="response_type" name="response_type" value="code" /><br />
+      <input type="text" id="response_type" name="response_type" value="code id_token" /><br />
       <label for="response_mode">Response Mode</label><br />
       <input type="text" id="response_mode" name="response_mode" value="form_post" /><br />
       <label for="realm">Realm</label><br />
