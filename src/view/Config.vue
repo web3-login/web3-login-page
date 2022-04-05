@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <h2>OpenID Connect Config for your Webpage</h2>
-
+    <market-info />
     <form action="/">
       <label for="authorize">Authorize URI (required)</label><br />
       <input
@@ -73,6 +73,7 @@
 </template>
 
 <script>
+import MarketInfo from '@/components/MarketInfo.vue';
 export default {
   name: "ConfigView",
   data() {
@@ -107,7 +108,7 @@ export default {
       await navigator.clipboard.writeText(this.url_text());
     },
   },
-  components: {},
+  components: {MarketInfo},
 };
 </script>
 <style scoped>

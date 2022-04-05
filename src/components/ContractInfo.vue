@@ -13,8 +13,13 @@ export default {
   setup() {
     const search = window.location.search;
     const contract = new URLSearchParams(search).get("contract");
-    const redirect_uri = new URLSearchParams(search).get("redirect_uri");
-    const page = new URL(redirect_uri).hostname;
+    const redirect_uri = new URLSearchParams(search).get("redirect_uri") || "";
+    var page = undefined;
+    try {
+      page = new URL(redirect_uri).hostname;
+    } catch {
+      console.log("redirect uri not found.");
+    }
     return {
       contract,
       redirect_uri,
