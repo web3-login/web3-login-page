@@ -1,11 +1,13 @@
 <template>
   <div class="marketinfo">
-    You need a NFT? Get one from this <a href="https://market.web3-login.net" >market</a>.
+    You need an NFT? Get one from this
+    <b><a href="https://market.web3-login.net">market</a></b
+    >.
   </div>
 </template>
 <script>
 export default {
-  name: "MarketInfo"
+  name: "MarketInfo",
 };
 </script>
 <style scoped>
@@ -21,5 +23,15 @@ export default {
   color: #ffffff;
 
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+a {
+  text-decoration: none;
+}
+a:link,
+a:visited {
+  color: white;
+}
+a:hover {
+  color: white;
 }
 </style>

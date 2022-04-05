@@ -3,28 +3,28 @@
     <h2>OpenID Connect Config for your Webpage</h2>
     <market-info />
     <form action="/">
-      <label for="authorize">Authorize URI (required)</label><br />
+      <label for="authorize">Authorize URI*</label><br />
       <input
         type="text"
         id="authorize"
         name="authorize"
         v-model="authorize_uri"
       /><br />
-      <label for="redirect_uri">Redirect URI (required)</label><br />
+      <label for="redirect_uri">Redirect URI*</label><br />
       <input
         type="text"
         id="redirect_uri"
         name="redirect_uri"
         v-model="redirect_uri"
       /><br />
-      <label for="client_id">Client ID (not required)</label><br />
+      <label for="client_id">Client ID</label><br />
       <input
         type="text"
         id="client_id"
         name="client_id"
         v-model="client_id"
       /><br />
-      <label for="scope">Scope (required)</label><br />
+      <label for="scope">Scope</label><br />
       <input type="text" id="scope" name="scope" v-model="scope" /><br />
       <label for="state">State</label><br />
       <input type="text" id="state" name="state" v-model="state" /><br />
@@ -55,7 +55,7 @@
       /><br />
 
       <br />
-      <input type="submit" value="Test Configuration" />
+      <input id="test-button" type="submit" value="Test Configuration" />
     </form>
     <div class="url">
       <label for="url_text">Your Login Url</label><br />
@@ -73,7 +73,7 @@
 </template>
 
 <script>
-import MarketInfo from '@/components/MarketInfo.vue';
+import MarketInfo from "@/components/MarketInfo.vue";
 export default {
   name: "ConfigView",
   data() {
@@ -108,7 +108,7 @@ export default {
       await navigator.clipboard.writeText(this.url_text());
     },
   },
-  components: {MarketInfo},
+  components: { MarketInfo },
 };
 </script>
 <style scoped>
@@ -127,8 +127,34 @@ h2 {
 }
 form {
   margin: auto;
+  padding: 20px;
   width: fit-content;
-  background: lightgray;
+  background: rgba(0, 0, 0, 0.88);
+  border-radius: 15px;
+}
+label {
+  margin: 10px 0;
+  float: left;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+input {
+  margin: 2px;
+  background: #e8e8e8;
+  border-radius: 7px;
+}
+#test-button {
+  margin: 20px 0;
+  width: 100%;
+}
+button {
+  margin: 20px;
+  background: #e8e8e8;
+  border-radius: 7px;
 }
 .url {
   color: white;
