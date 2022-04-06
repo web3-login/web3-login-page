@@ -45,7 +45,17 @@
         v-model="response_mode"
       /><br />
       <label for="realm">Realm</label><br />
-      <input type="text" id="realm" name="realm" v-model="realm" /><br />
+
+      <select id="realm" name="realm" v-model="realm">
+        <option
+          v-for="option in realm_options"
+          :value="option.value"
+          :key="option.text"
+        >
+          {{ option.text }}
+        </option></select
+      ><br />
+
       <label for="contract">NFT Contract</label><br />
       <input
         type="text"
@@ -73,6 +83,7 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import MarketInfo from "@/components/MarketInfo.vue";
 export default {
   name: "ConfigView",
@@ -108,6 +119,32 @@ export default {
       await navigator.clipboard.writeText(this.url_text());
     },
   },
+  setup() {
+    const realm_options = ref([
+      { text: "kovan", value: "kovan" },
+      { text: "meter", value: "meter" },
+    ]);
+    async function fetchRealms() {
+      return fetch(`${process.env.VUE_APP_OIDC_WEB3_LOGIN_HOST}/realms`, {
+        method: "get",
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((json) => {
+          realm_options.value = json.map((x) => {
+            return { text: x, value: x };
+          });
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    }
+    fetchRealms();
+    return {
+      realm_options,
+    };
+  },
   components: { MarketInfo },
 };
 </script>
@@ -142,7 +179,9 @@ label {
   line-height: 30px;
   color: #ffffff;
 }
-input {
+input,
+select,
+button {
   margin: 2px;
   background: #e8e8e8;
   border-radius: 7px;
@@ -153,8 +192,6 @@ input {
 }
 button {
   margin: 20px;
-  background: #e8e8e8;
-  border-radius: 7px;
 }
 .url {
   color: white;
