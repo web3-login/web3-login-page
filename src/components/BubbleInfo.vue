@@ -28,7 +28,7 @@ export default {
 </script>
 <style scoped>
 .content {
-  margin: auto;
+  margin: 120px auto;
   display: flex;
   width: fit-content;
 }

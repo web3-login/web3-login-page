@@ -96,7 +96,7 @@ export default {
       state: "",
       nonce: "random",
       response_type: "code id_token",
-      response_mode: "",
+      response_mode: "query",
       contract: "0x3B8270447b913d0b935e09d1C2daEc3F5CDD968f",
       realm: "kovan",
     };

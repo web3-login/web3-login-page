@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="howcontent">
     <div class="person">
       <img alt="Person 2" src="../assets/person2.svg" />
       <div class="person-text">
@@ -24,9 +24,9 @@ export default {
 };
 </script>
 <style scoped>
-.content {
+.howcontent {
   display: flex;
-  margin: auto;
+  margin: 100px auto;
   align-items: center;
   width: fit-content;
 }
@@ -34,7 +34,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 20px 60px;
 }
 .person-text {
   width: 570px;

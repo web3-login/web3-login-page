@@ -24,22 +24,10 @@ export default {
   display: flex;
   width: fit-content;
 }
-.web1 {
+.web1, .web2, .web3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
-}
-.web2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-}
-.web3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
+  margin: 100px 20px;
 }
 </style>

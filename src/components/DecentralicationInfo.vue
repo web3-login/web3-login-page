@@ -18,6 +18,7 @@ export default {
 </script>
 <style scoped>
 .content {
+  margin: 150px auto;
   display: flex;
   flex-direction: column;
   align-items: center;

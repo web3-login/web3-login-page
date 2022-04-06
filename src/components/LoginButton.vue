@@ -101,9 +101,13 @@ export default {
   cursor: pointer;
 }
 .content a:link {
+  color: #000000;
   text-decoration: none;
+  cursor: pointer;
 }
 .content a:visited {
+  color: #000000;
   text-decoration: none;
+  cursor: pointer;
 }
 </style>

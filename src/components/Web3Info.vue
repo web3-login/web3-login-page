@@ -18,7 +18,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 60px;
+  margin: 100px auto;
 }
 .title {
   margin: 20px;
