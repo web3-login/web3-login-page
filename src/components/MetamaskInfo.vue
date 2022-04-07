@@ -30,6 +30,12 @@ export default {
         .then((c_id) => {
           chainId.value = Number(c_id).toString(10);
         });
+      provider.on("accountsChanged", () => {
+        window.location.reload();
+      });
+      provider.on("chainChanged", () => {
+        window.location.reload();
+      });
     } else {
       console.error("Please install MetaMask!");
     }
