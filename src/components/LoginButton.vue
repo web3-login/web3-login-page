@@ -43,7 +43,7 @@ export default {
       const query = `${urlParams.toString()}`;
       console.log(query);
       window.open(
-        process.env.VUE_APP_OIDC_WEB3_LOGIN_HOST + "/nft/authorize?" + query,
+        process.env.VUE_APP_OIDC_WEB3_LOGIN_HOST + "/authorize?" + query,
         "_self"
       );
     },

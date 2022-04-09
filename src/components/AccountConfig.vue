@@ -1,7 +1,6 @@
 <template>
   <div class="content">
-    <h2>OpenID Connect Config for your Webpage</h2>
-    <market-info />
+    <h2>Your pages login does not need an NFT, just the Account?</h2>
     <form action="/">
       <label for="authorize">Authorize URI*</label><br />
       <input
@@ -44,25 +43,6 @@
         name="response_mode"
         v-model="response_mode"
       /><br />
-      <label for="realm">Realm</label><br />
-
-      <select id="realm" name="realm" v-model="realm">
-        <option
-          v-for="option in realm_options"
-          :value="option.value"
-          :key="option.text"
-        >
-          {{ option.text }}
-        </option></select
-      ><br />
-
-      <label for="contract">NFT Contract</label><br />
-      <input
-        type="text"
-        id="contract"
-        name="contract"
-        v-model="contract"
-      /><br />
 
       <br />
       <input id="test-button" type="submit" value="Test Configuration" />
@@ -79,28 +59,22 @@
       />
       <button v-on:click="copyUrl">Copy Your Login Url</button>
     </div>
-    <account-config />
   </div>
 </template>
 
 <script>
-import { ref } from "vue";
-import MarketInfo from "@/components/MarketInfo.vue";
-import AccountConfig from "@/components/AccountConfig.vue";
 export default {
-  name: "ConfigView",
+  name: "AccountConfig",
   data() {
     return {
       authorize_uri: "https://oidc.web3-login.net/authorize",
       redirect_uri: "https://oidcdebugger.com/debug",
-      client_id: "0x3B8270447b913d0b935e09d1C2daEc3F5CDD968f",
-      scope: "openid nft",
+      client_id: "random",
+      scope: "openid",
       state: "",
       nonce: "random",
       response_type: "code id_token",
       response_mode: "query",
-      contract: "0x3B8270447b913d0b935e09d1C2daEc3F5CDD968f",
-      realm: "kovan",
     };
   },
   methods: {
@@ -113,41 +87,13 @@ export default {
       url.searchParams.append("nonce", this.nonce);
       url.searchParams.append("response_type", this.response_type);
       url.searchParams.append("response_mode", this.response_type);
-      url.searchParams.append("contract", this.contract);
-      url.searchParams.append("realm", this.realm);
       return url.href;
     },
     async copyUrl() {
       await navigator.clipboard.writeText(this.url_text());
     },
   },
-  setup() {
-    const realm_options = ref([
-      { text: "kovan", value: "kovan" },
-      { text: "meter", value: "meter" },
-    ]);
-    async function fetchRealms() {
-      return fetch(`${process.env.VUE_APP_OIDC_WEB3_LOGIN_HOST}/realms`, {
-        method: "get",
-      })
-        .then((res) => {
-          return res.json();
-        })
-        .then((json) => {
-          realm_options.value = json.map((x) => {
-            return { text: x, value: x };
-          });
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    }
-    fetchRealms();
-    return {
-      realm_options,
-    };
-  },
-  components: { MarketInfo, AccountConfig },
+  components: {},
 };
 </script>
 <style scoped>
