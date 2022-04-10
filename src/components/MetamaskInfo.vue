@@ -20,7 +20,8 @@ export default {
     return {};
   },
   setup() {
-    const chainId = ref("");
+    const chainId = ref(undefined);
+    const account = ref(undefined);
     const provider = window.ethereum;
     if (provider) {
       provider
@@ -30,16 +31,25 @@ export default {
         .then((c_id) => {
           chainId.value = Number(c_id).toString(10);
         });
-      provider.on("accountsChanged", () => {
-        window.location.reload();
+      provider.on("accountsChanged", (acc) => {
+        if (account.value != undefined && account.value != acc) {
+          window.location.reload();
+        } else {
+          account.value = acc;
+        }
       });
-      provider.on("chainChanged", () => {
-        window.location.reload();
+      provider.on("chainChanged", (chain_id) => {
+        if (chainId.value != undefined && chainId.value != chain_id) {
+          window.location.reload();
+        } else {
+          chainId.value = chain_id;
+        }
       });
     } else {
       console.error("Please install MetaMask!");
     }
     return {
+      account,
       chainId,
       provider,
     };
