@@ -1,5 +1,8 @@
 <template>
-  <div class="logininfo">LOG IN USING YOUR CRYPTO <br/> ACCOUNT</div>
+  <div class="logininfo">
+    Log in using your crypto <br />
+    account
+  </div>
 </template>
 
 <script>
@@ -18,6 +21,7 @@ export default {
   font-weight: 400;
   font-size: 36px;
   text-align: center;
+  text-transform: uppercase;
 
   color: #ffffff;
 

@@ -1,5 +1,7 @@
 # web3-login-page
 
+frontend for oidc provider using web3 technologies
+
 ## Project setup
 
 ```sh

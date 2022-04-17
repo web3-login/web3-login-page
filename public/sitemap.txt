@@ -1,3 +1,6 @@
 https://web3-login.net/
 https://web3-login.net/#/
 https://web3-login.net/#/config
+https://oidc.web3-login.net/
+/#/
+/#/config
