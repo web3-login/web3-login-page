@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="bubbleinfo">
     <div class="nft-bubble">
       <h2>NFT Owner</h2>
       <div>
@@ -27,7 +27,7 @@ export default {
 };
 </script>
 <style scoped>
-.content {
+.bubbleinfo {
   margin: 120px auto;
   display: flex;
   width: fit-content;
@@ -76,5 +76,23 @@ export default {
 }
 ul {
   text-align: left;
+}
+@media only screen and (max-width: 768px) {
+  .bubbleinfo {
+    margin: 0;
+    transform: scale(0.5);
+    height: 400px;
+    width: 350px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .provider-bubble {
+    width: 570px;
+    height: 240px;
+  }
+  .nft-bubble {
+    width: 435px;
+    height: 245px;
+  }
 }
 </style>

@@ -64,4 +64,32 @@ export default {
 
   color: #ffffff;
 }
+@media only screen and (max-width: 768px) {
+  .howcontent {
+    display: block;
+    margin: auto;
+    transform: scale(0.5);
+    height: 300px;
+    width: 350px;
+    align-items: center;
+  }
+  .person {
+    margin: auto;
+    width: 80%;
+  }
+  .person img {
+    width: 300px;
+  }
+  .person-text {
+    margin: 10px;
+    width: 400px;
+    min-height: 66px;
+  }
+  .stack {
+    width: 300px;
+  }
+  .stack img {
+    width: 300px;
+  }
+}
 </style>

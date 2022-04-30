@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <router-link to="/"><web-3-logo /></router-link>
-    <router-link to="/config">Configure your Webpage</router-link>
+    <router-link id="config" to="/config">Configure your Webpage</router-link>
   </div>
 </template>
 
@@ -12,13 +12,13 @@ export default defineComponent({
   name: "NavbarComp",
   components: {
     Web3Logo,
-  }
+  },
 });
 </script>
 <style scoped>
 .navbar {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   width: 90%;
   margin: 10px;
   overflow: hidden;
@@ -35,5 +35,16 @@ export default defineComponent({
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
+}
+@media only screen and (max-width: 768px) {
+  .navbar {
+    width: 300px;
+  }
+  .navbar a {
+    margin: auto;
+  }
+  #config {
+    display: none;
+  }
 }
 </style>

@@ -35,15 +35,14 @@ export default {
 };
 </script>
 <style scoped>
-web-3-logo {
-  position: absolute;
-  left: 2%;
-  top: 5%;
-}
 .content {
   position: relative;
-
   align-content: center;
   background: #002245;
+}
+@media only screen and (max-width: 768px) {
+  .content {
+    max-width: 350px;
+  }
 }
 </style>

@@ -39,4 +39,9 @@ export default {
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+@media only screen and (max-width: 768px) {
+  .contractinfo {
+    height: auto;
+  }
+}
 </style>

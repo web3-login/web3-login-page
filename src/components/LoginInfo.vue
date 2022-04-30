@@ -27,4 +27,12 @@ export default {
 
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+@media only screen and (max-width: 768px) {
+  .logininfo {
+    transform: scale(0.5);
+    transform-origin: top center;
+    margin: 0;
+    width: 350px;
+  }
+}
 </style>

@@ -69,4 +69,9 @@ export default {
   color: #ffffff;
   line-height: 60px;
 }
+@media only screen and (max-width: 768px) {
+  .metamaskinfo span {
+    line-height: 30px;
+  }
+}
 </style>

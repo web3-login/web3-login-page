@@ -28,4 +28,23 @@ export default {
 .row img {
   margin: 25px;
 }
+@media only screen and (max-width: 768px) {
+  .storycontent {
+    margin: auto;
+    display: block;
+    height: 1000px;
+    width: 350px;
+    align-items: center;
+  }
+  .row {
+    display: block;
+    width: 300px;
+    height: 400px;
+  }
+  .row img {
+    width: 300px;
+    height: 200px;
+    margin: auto;
+  }
+}
 </style>

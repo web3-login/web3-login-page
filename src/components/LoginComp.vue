@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="logincomp">
     <metamask-info />
     <contract-info />
     <login-button />
@@ -20,10 +20,17 @@ export default {
 };
 </script>
 <style scoped>
-.content {
+.logincomp {
   margin: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .logincomp {
+    transform: scale(0.8);
+    margin: 10px;
+    width: 350px;
+  }
 }
 </style>

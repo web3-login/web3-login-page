@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="web3info">
     <div class="title">What is Web3 and what it does?</div>
     <div class="text-content">
       This application only needs to use the wallet private key to sign a string
@@ -14,7 +14,7 @@ export default {
 };
 </script>
 <style scoped>
-.content {
+.web3info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,5 +40,20 @@ export default {
   line-height: 30px;
 
   color: #ffffff;
+}
+@media only screen and (max-width: 768px) {
+  .web3info {
+    margin: 0;
+    transform: scale(0.5);
+    height: 200px;
+    width: 350px;
+  }
+  .title {
+    height: auto;
+  }
+  .text-content {
+    width: 300px;
+    height: auto;
+  }
 }
 </style>
