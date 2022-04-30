@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <h2>OpenID Connect Config for your Webpage</h2>
+    <h1>OpenID Connect Config for your Webpage</h1>
     <market-info />
     <form action="/">
       <label for="authorize">Authorize URI*</label><br />
@@ -161,7 +161,7 @@ web-3-logo {
   align-content: center;
   background: #002245;
 }
-h2 {
+h1 {
   color: white;
 }
 form {

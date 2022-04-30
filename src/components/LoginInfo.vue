@@ -1,8 +1,8 @@
 <template>
-  <div class="logininfo">
+  <h1 class="logininfo">
     Log in using your crypto <br />
     account
-  </div>
+  </h1>
 </template>
 
 <script>
