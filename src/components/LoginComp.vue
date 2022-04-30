@@ -28,8 +28,8 @@ export default {
 }
 @media only screen and (max-width: 768px) {
   .logincomp {
+    margin: auto;
     transform: scale(0.8);
-    margin: 10px;
     width: 350px;
   }
 }

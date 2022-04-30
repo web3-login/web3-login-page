@@ -51,4 +51,14 @@ a:visited {
 a:hover {
   color: white;
 }
+@media only screen and (max-width: 768px) {
+  .nometamask {
+    width: 350px;
+    height: 200px;
+    display: block;
+  }
+  .nometamask span {
+    line-height: 30px;
+  }
+}
 </style>
